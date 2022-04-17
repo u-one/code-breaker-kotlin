@@ -1,6 +1,11 @@
 # code-breaker-kotlin
 This is "code breaker" implementation to learn Kotlin
 
+
+![Test](https://github.com/u-one/code-breaker-kotlin/actions/workflows/main.yml/badge.svg)
+
+[![codecov](https://codecov.io/gh/u-one/code-breaker-kotlin/branch/main/graph/badge.svg?token=5H5CJGDY6L)](https://codecov.io/gh/u-one/code-breaker-kotlin)
+
 ## Reference
 
 ### Tests
