@@ -71,15 +71,11 @@ class CodeBreaker(codeGenerator: CodeGenerator,
     }
 }
 
-fun main(args: Array<String>) {
-    println("Hello World!")
-
+fun main() {
     val codeGenerator = DefaultCodeGenerator(10000)
     val codeInputer = DefaultCodeInputer()
     val codeBreaker = CodeBreaker(codeGenerator, codeInputer)
-    codeBreaker.start()
-
-    // Try adding program arguments at Run/Debug configuration
-    println("Program arguments: ${args.joinToString()}")
+    val result = codeBreaker.start()
+    if (result) println("Succeed") else println("Failed.")
 }
 
