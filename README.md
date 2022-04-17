@@ -11,3 +11,4 @@ This is "code breaker" implementation to learn Kotlin
 ### Tests
 - https://github.com/junit-team/junit5-samples/tree/main/junit5-jupiter-starter-gradle-kotlin
 - https://github.com/mockito/mockito-kotlin
+- https://docs.gradle.org/current/userguide/jacoco_plugin.html
