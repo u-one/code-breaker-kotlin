@@ -26,11 +26,16 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-          settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+
+      - name: Run the Gradle package task
+        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
 
       - name: Build
         run: ./gradlew build
 
       - name: Test
         run: ./gradlew  test
+
