@@ -40,6 +40,8 @@ jobs:
       - name: Test
         run: ./gradlew  test
 
+      - uses: codecov/codecov-action@v2
+
       - name: Archive code coverage results
         if: always()
         uses: actions/upload-artifact@v1
