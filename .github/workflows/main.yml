@@ -30,12 +30,19 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
 
-      - name: Run the Gradle package task
+      - name: Build
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
 
-      - name: Build
-        run: ./gradlew build
+
+      #- name: Build
+      #  run: ./gradlew build
 
       - name: Test
         run: ./gradlew  test
 
+      - name: Archive code coverage results
+        if: always()
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report
+          path: build/reports
